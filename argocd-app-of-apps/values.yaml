@@ -7,33 +7,19 @@ syncPolicy:
   syncOptions:
     - CreateNamespace=true
 gitops:
-  repoURL: https://github.com/krumIO/cloud-native-cicd-starter.git
+  repoURL: https://github.com/ohmygaugh-crypto/cloud-native-cicd-starter.git
 spec:
   applications:
     # - name: baseline-wp
     #   path: helm/baseline-wp-microsite
     #   repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
     #   targetRevision: HEAD
-    - name: baseline-golang
-      path: helm/baseline-golang-app
-      repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
-      targetRevision: HEAD
+
     - name: baseline-react
       path: helm/baseline-react-app
-      repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
+      repoURL: https://github.com/ohmygaugh-crypto/cloud-native-workshop-charts.git
       targetRevision: HEAD
-    - name: baseline-vue
-      path: helm/baseline-vue-app
-      repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
-      targetRevision: HEAD
-    - name: baseline-laravel
-      path: helm/example-laravel-app
-      repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
-      targetRevision: HEAD
-    - name: python-hello-world
-      path: helm/python-docs-hello-world
-      repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
-      targetRevision: HEAD
+   
     # - name: umbrella
     #   path: helm/example-umbrella
     #   repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
