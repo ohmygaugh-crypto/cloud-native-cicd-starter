@@ -13,7 +13,7 @@ This repository contains an example methodology of deployment following the Argo
 
 2. Refer to `app-of-apps-values.yaml`
 
-    This file is where we define our applications and environments, aka our sources and our targets.  The configurations here will default to an auto-syncing strategy for our applications however environments may individually override this behavior as desired via `syncOverrides`.  Applications may also be gated from these environments by supplying an `applicationFilter`.
+    This file is where we define our ##applications and ##environments, aka our sources and our targets.  The configurations here will default to an auto-syncing strategy for our applications however environments may individually override this behavior as desired via `syncOverrides`.  Applications may also be gated from these environments by supplying an `applicationFilter`.
 
     Notable structure explained:
     - `syncPolicy` defines our default syncing strategy for each environment

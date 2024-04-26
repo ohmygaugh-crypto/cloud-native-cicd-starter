@@ -4,36 +4,22 @@
 docker:
   # server: docker-registry.131.153.227.137.sslip.io
   server: docker.io
-  prefix: krumware/
+  prefix: ohmygaugh/
   secretName: docker-push-user
 
 github:
   # github repository owner
-  owner: krumIO
+  owner: ohmygaugh-crypto
   # the list of repositories to build on push events
   repositories:
-    python-docs-hello-world:
-      values: python-hello-world-values.yaml
-      branches:
-        master: "python-docs-hello-world"
+   
     baseline-react-app:
       values: baseline-react-values.yaml
       branches:
         main: "baseline-react-app"
-    baseline-vue-app:
-      values: baseline-vue-values.yaml
-      branches:
-        main: "baseline-vue-app"
-    example-laravel-app:
-      values: baseline-laravel-values.yaml
-      branches:
-        main: "example-laravel-app"
-    baseline-golang-app:
-      values: baseline-golang-values.yaml
-      branches:
-        main: "baseline-golang-app"
+
   # configures where automated tagging commits are sent
-  automateCommits: false
+  automateCommits: true
   deploymentRepository: cloud-native-cicd-starter
   deploymentFolderPath: environments/development
 
