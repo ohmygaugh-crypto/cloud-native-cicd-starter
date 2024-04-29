@@ -1,10 +1,11 @@
 image:
-  repository: krumware/baseline-react-app
+  repository: ohmygaugh-crypto/baseline-react-app
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
 
   tag: "20230822T154742"
-imagePullSecrets: []
+imagePullSecrets: 
+  - name: docker-pull-secret
 service:
   type: ClusterIP
   port: 3000
@@ -12,14 +13,18 @@ ingress:
   enabled: true
   className: "traefik"
   annotations:
+    - cert-manager.io/cluster-issuer: letsencrypt-production
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: react.212.2.241.168.sslip.io
+    - host: react.212.2.242.152.sslip.io
       paths:
         - path: /
           pathType: Prefix
-  tls: []
+  tls: 
+    - hosts: 
+      - react.212.2.242.152.sslip.io
+      secretName: baseline-react-app-tls
 resources:
   limits:
     cpu: 500m
