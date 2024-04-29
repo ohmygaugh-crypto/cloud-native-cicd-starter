@@ -17,7 +17,7 @@ spec:
 
     - name: baseline-react
       path: helm/baseline-react-app
-      repoURL: https://github.com/ohmygaugh-crypto/cloud-native-workshop-charts.git
+      repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
       targetRevision: HEAD
    
     # - name: umbrella
