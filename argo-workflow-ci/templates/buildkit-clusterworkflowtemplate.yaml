@@ -200,10 +200,10 @@ spec:
         resources:
           requests:
             memory: "1600Mi"
-            cpu: "400m"
+            cpu: "2000m"
           limits:
             memory: "1600Mi"
-            cpu: "400m"
+            cpu: "2000m"
     - name: deploy
       inputs:
         parameters:
