@@ -17,13 +17,13 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: react.212.2.243.125.sslip.io
+    - host: react.212.2.242.212.sslip.io
       paths:
         - path: /
           pathType: Prefix
   tls: 
     - hosts: 
-        - react.212.2.243.125.sslip.io
+        - react.212.2.242.212.sslip.io
       secretName: baseline-react-app-tls
 resources:
   limits:
