@@ -8,7 +8,7 @@ syncPolicy:
   syncOptions:
     - CreateNamespace=true
 gitops:
-  repoURL: https://github.com/krumIO/cloud-native-cicd-starter.git
+  repoURL: https://github.com/ohmygaugh-crypto/cloud-native-cicd-starter.git
   values: app-of-apps-values.yaml
 spec:
   applications:
@@ -22,7 +22,7 @@ spec:
       targetRevision: HEAD
     - name: baseline-react
       path: helm/baseline-react-app
-      repoURL: https://github.com/krumIO/cloud-native-workshop-charts.git
+      repoURL: https://github.com/ohmygaugh-crypto/cloud-native-workshop-charts.git
       targetRevision: HEAD
     - name: baseline-vue
       path: helm/baseline-vue-app
