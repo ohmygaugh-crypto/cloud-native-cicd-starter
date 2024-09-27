@@ -5,7 +5,7 @@
 	1. Bring your own docker registry (dockerhub for our purposes, can cover others at secret creation)
 3. **Rancher**
 	1. Create secrets on rancher in namespace argocd
-		1. githube-machine-user
+		1. github-machine-user
 			1. username, email, token (PAT)
 		2. docker-push-user
 			1. registry secret
