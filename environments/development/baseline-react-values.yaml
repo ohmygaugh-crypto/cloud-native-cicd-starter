@@ -23,7 +23,7 @@ ingress:
           pathType: Prefix
   tls: 
     - hosts: 
-        - react.212.2.246.51.sslip.io
+        - react.212.2.243.125.sslip.io
       secretName: baseline-react-app-tls
 resources:
   limits:
