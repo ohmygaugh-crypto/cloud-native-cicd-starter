@@ -9,6 +9,15 @@ imagePullSecrets:
 service:
   type: ClusterIP
   port: 3000
+  ports:
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP
+      name: http
+    - port: 3000
+      targetPort: 3000
+      protocol: TCP
+      name: ws
 ingress:
   enabled: true
   className: "traefik"
@@ -16,6 +25,7 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-production
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+    traefik.ingress.kubernetes.io/websocket-routes: "/"
   hosts:
     - host: react.212.2.242.193.sslip.io
       paths:
