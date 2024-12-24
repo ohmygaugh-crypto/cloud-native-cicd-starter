@@ -14,6 +14,7 @@ github:
   repositories:
    
     baseline-react-app:
+    # is this the correct values file? does it need to be the docker-compose.yaml file? actually it is the in the environment folder within this argo-workflow-ci folder
       values: baseline-react-values.yaml
       branches:
         main: "baseline-react-app"
