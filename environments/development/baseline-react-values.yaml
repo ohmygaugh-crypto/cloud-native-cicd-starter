@@ -8,14 +8,14 @@ imagePullSecrets:
   - name: docker-pull-secret
 service:
   type: ClusterIP
-  port: 3000
+  port: 80
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 80
+      targetPort: 80
       protocol: TCP
       name: http
-    - port: 3000
-      targetPort: 3000
+    - port: 443
+      targetPort: 443
       protocol: TCP
       name: ws
 ingress:
@@ -39,3 +39,10 @@ resources:
   limits:
     cpu: 500m
     memory: 1000Mi
+env:
+  - name: WDS_SOCKET_HOST
+    value: "react.212.2.242.193.sslip.io"
+  - name: WDS_SOCKET_PORT
+    value: "443"
+  - name: HTTPS
+    value: "true"
