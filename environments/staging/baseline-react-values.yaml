@@ -13,10 +13,10 @@ service:
       targetPort: 80
       protocol: TCP
       name: http
-    - port: 80
+    - port: 443
       targetPort: 80
       protocol: TCP
-      name: ws
+      name: https
 ingress:
   enabled: true
   className: "traefik"

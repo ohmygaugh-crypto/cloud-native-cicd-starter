@@ -15,9 +15,9 @@ service:
       protocol: TCP
       name: http
     - port: 443
-      targetPort: 443
+      targetPort: 80
       protocol: TCP
-      name: ws
+      name: https
 ingress:
   enabled: true
   className: "traefik"
@@ -39,6 +39,7 @@ resources:
   limits:
     cpu: 500m
     memory: 1000Mi
+
 env:
   - name: WDS_SOCKET_HOST
     value: "react.212.2.242.193.sslip.io"
